@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forum.blueforcer.de/</Support>
   <Project>https://awtrixdocs.blueforcer.de/</Project>
   <Overview>Docker Container for Awtrix2 Host in collaboration with Blueforcer.&#xD;
 &#xD;
