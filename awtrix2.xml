@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Awtrix2</Name>
+  <Repository>whyet/awtrix2</Repository>
+  <Registry>https://hub.docker.com/r/whyet/awtrix2</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://awtrixdocs.blueforcer.de/</Project>
+  <Overview>Docker Container for Awtrix2 Host in collaboration with Blueforcer.&#xD;
+&#xD;
+The Container is based on the anapsix/alpine-java:8_JDK image.&#xD;
+&#xD;
+It has an autoupdate feature witch will get the latest Host from the Awtrix Site on a restart from the Container.&#xD;
+</Overview>
+  <Category>Drivers: Security: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:7000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/38006982?s=200&amp;amp;v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1627187570</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Docker Container for Awtrix2 Host in collaboration with Blueforcer.&#xD;
+&#xD;
+The Container is based on the anapsix/alpine-java:8_JDK image.&#xD;
+&#xD;
+It has an autoupdate feature witch will get the latest Host from the Awtrix Site on a restart from the Container.&#xD;
+</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7000</HostPort>
+        <ContainerPort>7000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7001</HostPort>
+        <ContainerPort>7001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5568</HostPort>
+        <ContainerPort>5568</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/docker/awtrix2</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Asia/Shanghai</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-Duser.language=zh -Duser.country=CN</Value>
+      <Name>JAVA_TOOL_OPTIONS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>AUTOUPDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>AWTRIX_BETA</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Web Controller Port" Target="7000" Default="7000" Mode="tcp" Description="Web Controller Port" Type="Port" Display="always" Required="true" Mask="false">7000</Config>
+  <Config Name="API Port" Target="7001" Default="7001" Mode="tcp" Description="API Port" Type="Port" Display="always" Required="true" Mask="false">7001</Config>
+  <Config Name="Host Port 3" Target="5568" Default="5568" Mode="udp" Description="Container Port: 5568" Type="Port" Display="always" Required="true" Mask="false">5568</Config>
+  <Config Name="Amazon Alexa Port" Target="80" Default="80" Mode="tcp" Description="For Amazon Alexa Support you need this Port. If This Port is already used this can be changed in the config file." Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Config Path" Target="/data" Default="/mnt/user/appdata/awtrix2" Mode="rw" Description="Config Path&#13;&#10;Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/awtrix2</Config>
+  <Config Name="Time Zone" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Language" Target="JAVA_TOOL_OPTIONS" Default="-Duser.language=en -Duser.country=US" Mode="" Description="If you want AWTRIX to automatically display some apps like DayOfTheWeek in your local language/format (e.g. " Type="Variable" Display="always" Required="true" Mask="false">-Duser.language=en -Duser.country=US</Config>
+  <Config Name="Auto Update" Target="AUTOUPDATE" Default="false" Mode="" Description="Container Variable: AUTOUPDATE" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Beta Version" Target="AWTRIX_BETA" Default="false" Mode="" Description="Container Variable: AWTRIX_BETA" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+</Container>
