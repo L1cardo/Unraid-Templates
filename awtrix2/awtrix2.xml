@@ -21,7 +21,7 @@ It has an autoupdate feature witch will get the latest Host from the Awtrix Site
   <ExtraParams>--restart always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1627299406</DateInstalled>
+  <DateInstalled>1627299681</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Docker Container for Awtrix2 Host in collaboration with Blueforcer.&#xD;
