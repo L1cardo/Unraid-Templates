@@ -18,10 +18,10 @@ It has an autoupdate feature witch will get the latest Host from the Awtrix Site
   <WebUI>http://[IP]:[PORT:7000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/L1cardo/Unraid-Templates/main/awtrix2/awtrix2.xml</TemplateURL>
   <Icon>https://avatars.githubusercontent.com/u/38006982?s=200&amp;amp;v=4</Icon>
-  <ExtraParams>--restart always</ExtraParams>
+  <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1627299681</DateInstalled>
+  <DateInstalled>1627299829</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Docker Container for Awtrix2 Host in collaboration with Blueforcer.&#xD;
@@ -73,12 +73,12 @@ It has an autoupdate feature witch will get the latest Host from the Awtrix Site
       <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
+      <Value>true</Value>
       <Name>AUTOUPDATE</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
+      <Value>true</Value>
       <Name>AWTRIX_BETA</Name>
       <Mode/>
     </Variable>
@@ -91,6 +91,6 @@ It has an autoupdate feature witch will get the latest Host from the Awtrix Site
   <Config Name="Config Path" Target="/data" Default="/mnt/user/appdata/awtrix2" Mode="rw" Description="Config Path&#13;&#10;Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/awtrix2</Config>
   <Config Name="Time Zone" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="true" Mask="false">Asia/Shanghai</Config>
   <Config Name="Language" Target="JAVA_TOOL_OPTIONS" Default="-Duser.language=en -Duser.country=US" Mode="" Description="If you want AWTRIX to automatically display some apps like DayOfTheWeek in your local language/format (e.g. " Type="Variable" Display="always" Required="true" Mask="false">-Duser.language=en -Duser.country=US</Config>
-  <Config Name="Auto Update" Target="AUTOUPDATE" Default="false" Mode="" Description="Container Variable: AUTOUPDATE" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="Beta Version" Target="AWTRIX_BETA" Default="false" Mode="" Description="Container Variable: AWTRIX_BETA" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Auto Update" Target="AUTOUPDATE" Default="true" Mode="" Description="Container Variable: AUTOUPDATE" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Beta Version" Target="AWTRIX_BETA" Default="true" Mode="" Description="Container Variable: AWTRIX_BETA" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
 </Container>
